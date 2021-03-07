@@ -1,0 +1,73 @@
+/* Carousel */
+.carousel-item {
+    height: 500px;
+}
+
+.bg-cover {
+    background-size: cover;
+    color: white;
+    background-position: center center;
+    position: relative;
+    z-index: -2;
+}
+
+.overlay {
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+/* Parallax */
+#parallax .parallax {
+    /* The image used */
+    background-image: url("../img/parallax/sekolah.jpg");
+    opacity: 0.5;
+
+    /* Set a specific height */
+    min-height: 150px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 250px;
+    }
+
+    .carousel-item img {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 250px;
+    }
+
+    .carousel-item img {
+        min-height: 250px;
+    }
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+/* @media only screen and (max-device-width: 576px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+} */
