@@ -12,11 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="css/mdb.min.css" rel="stylesheet" />
-
+    <!-- OverlayScrollbars -->
+    <link rel="stylesheet" href="dist/OverlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- My Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>SD Negeri 016 Anggana</title>
+    <title>SDN 016 Anggana</title>
+    <link rel="shortcut icon" href="img/twh.png" />
+
     <style type="text/css">
         .bg-cover {
             background-image: url('img/banner/banner1.jpg');
@@ -27,7 +30,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">SDN 016 Anggana</a>
+            <a class="navbar-brand fw-bolder" href="#">SD Negeri 016 Anggana</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -37,20 +40,44 @@
                     <li class="nav-item">
                         <a class="nav-link text-white active" aria-current="page" href="#">Beranda</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Profile Sekolah</a>
+                    <!-- Navbar dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Tentang Kami
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown" style="min-width: 100%;">
+                            <li><a class="dropdown-item" href="#">Profile Sekolah</a></li>
+                            <li><a class="dropdown-item" href="#">Sarana & Prasarana</a></li>
+                            <li><a class="dropdown-item" href="#visimisi">Visi & Misi</a></li>
+                        </ul>
+                    </li>
+                    <!-- Navbar dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Kurikulum
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown" style="min-width: 100%;">
+                            <li><a class="dropdown-item" href="#">Kalender Akademik</a></li>
+                            <li><a class="dropdown-item" href="#">Ekstrakurikuler</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Guru & Staf</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Fasilitas</a>
+                        <a class="nav-link text-white" href="#galeri">Galeri</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Galeri</a>
+                    <li class="nav-item my-lg-auto my-2 ms-lg-2 mx-auto border-0">
+                        <a class="btn btn-warning btn-sm btn-rounded" href="#">PPDB</a>
                     </li>
                     <li class="nav-item my-lg-auto my-2 mx-lg-2 mx-auto border-0">
-                        <a class="btn btn-primary btn-sm rounded-pill" href="#">Hubungi Kami</a>
+                        <a class="btn btn-primary btn-sm btn-rounded" href="#">Hubungi Kami</a>
                     </li>
                 </ul>
             </div>
@@ -65,14 +92,14 @@
                     <br>
                     <p class="font-weight-bold" style="text-shadow: 3px 3px 5px #000;">SD Negeri 016 Anggana</p>
                 </h1>
-                <p class="lead" style="text-shadow: 3px 3px 5px #000;">Wujudkan siswa cerdas dan berakhlak mulia.</p>
+                <p class="lead fw-normal">SDN 016 ANGGANA <b>'BISA'</b> Berahlak Indah Santun Amanah</p>
             </div>
         </div>
     </section>
 
-    <section id="sambutan">
+    <section id="sambutan" class="py-5">
         <div class="container">
-            <div class="row py-5">
+            <div class="row">
                 <div class="col-lg-6">
                     <h3 class="text-center font-weight-bold">Sambutan Kepala Sekolah</h3>
                     <h5 class="text-center font-weight-bold">SD Negeri 021 Tenggarong</h5>
@@ -90,6 +117,32 @@
         </div>
     </section>
 
+    <section id="visimisi" class="py-5" style="background-color:rgb(240, 255, 240);">
+        <div class="container">
+            <h1 class="text-center fw-bolder">Visi & Misi</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Misi</h3>
+                    <span>
+                        1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
+                        Tulis Al-Quran (BTA), berdo'a sebelum atau sesudah belajar dan ucapan salam terhadap guru. <br>
+                        2. Melaksanakan pembelajaran dengan pendekatan PAKEM dan Inkuiri. <br>
+                        3. Menerapkan pembelajaran yang berbasis Teknologi Informasi dan Komunikasi. <br>
+                        4. Mengembangkan bakat siswa dibidang seni dan olahraga seperti sepak takraw dan tarian
+                        daerah. <br>
+                        5. Membudayakan sikap <strong>senyum, sapa, salam, sopan, dan santun (5S)</strong> di
+                        lingkungan sekolah. <br>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Visi</h3>
+                    <p class="text-uppercase">"Mewujudkan Generasi Penerus Bangsa Yang Beriman, berakhlak mulia, cerdas,
+                        sehat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="parallax">
         <!-- Container element -->
         <div class="parallax">
@@ -97,21 +150,21 @@
                 <div class="row text-white py-5">
                     <div class="col-lg-12">
                         <div class="header">
-                            <h2 class="text-center font-weight-bold text-uppercase"
-                                style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">Data Sekolah</h2>
+                            <h1 class="text-center fw-bold text-uppercase"
+                                style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">Data Sekolah</h1>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-3">
-                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">500+
+                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">151+
                         </h2>
                         <h4 class="text-center">Siswa</h4>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-3">
-                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">46+</h2>
+                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">12+</h2>
                         <h4 class="text-center">Guru Mengajar</h4>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-3">
-                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">15+</h2>
+                        <h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">9+</h2>
                         <h4 class="text-center">Rombel</h4>
                     </div>
                     <div class="col-lg-3 col-md-6 mt-3">
@@ -123,24 +176,79 @@
         </div>
     </section>
 
-    <section id="visimisi">
+    <section id="galeri" class="py-5">
         <div class="container">
-            <h3 class="mt-5 text-center">Visi & Misi</h3>
+            <h1 class="text-center fw-bolder">Galeri Sekolah</h1>
             <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Misi</h3>
+                    <span>
+                        1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
+                        Tulis Al-Quran (BTA), berdo'a sebelum atau sesudah belajar dan ucapan salam terhadap guru. <br>
+                        2. Melaksanakan pembelajaran dengan pendekatan PAKEM dan Inkuiri. <br>
+                        3. Menerapkan pembelajaran yang berbasis Teknologi Informasi dan Komunikasi. <br>
+                        4. Mengembangkan bakat siswa dibidang seni dan olahraga seperti sepak takraw dan tarian
+                        daerah. <br>
+                        5. Membudayakan sikap <strong>senyum, sapa, salam, sopan, dan santun (5S)</strong> di
+                        lingkungan sekolah. <br>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bolder">Visi</h3>
+                    <p class="text-uppercase">"Mewujudkan Generasi Penerus Bangsa Yang Beriman, berakhlak mulia, cerdas,
+                        sehat.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-1">
-        <p class="text-center mt-3">© <a href="https://sansgroup.xyz" class="text-secondary text-muted">Sans Group</a>
-            2021 - All Right Reserved by Sans Group.</p>
+    <footer class="bg-success text-white text-center text-md-start pt-4 pb-2">
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-4">
+                    <h3 class="text-uppercase fw-bold">Kontak</h3>
+                    <h5 class="text-uppercase">SD Negeri 016 Anggana</h5>
+
+                    <span class="fw-bold">Email</span>
+                    <p class="mb-0"><a href="mailto:sdn016anggana@gmail.com"
+                            class="text-white">sdn016anggana@gmail.com</a></p>
+                    <span class="fw-bold">Telepon</span>
+                    <p class="mb-0">+62-21 8932 3188</p>
+                    <span class="fw-bold">Alamat</span>
+                    <p class="mb-0">RT 07 Sepatin, Sepatin, Kec. Anggana, Kab. Kutai Kartanegara Prov. Kalimantan Timur
+                        - Indonesia</p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-12 mb-4 mb-md-0 mx-auto">
+                    <h3 class="text-uppercase fw-bold">Lokasi</h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15957.798353677956!2d117.5927103!3d-0.7789683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x627f2ba01b61d265!2sSDN%20016%20Anggana!5e0!3m2!1sen!2sid!4v1616059889896!5m2!1sen!2sid"
+                        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+        <p class="text-center mt-3">© 2021 SD Negeri 016 Anggana. All Rights Reserved</p>
     </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
+    <!-- OverlayScrollbars -->
+    <script src="dist/OverlayScrollbars/js/OverlayScrollbars.min.js"></script>
+    <script>
+        $('body').overlayScrollbars({});
+    </script>
 </body>
 
 </html>
