@@ -1,25 +1,4 @@
 /* Navbar */
-/* .nav-link {
-    transition: 0.2s;
-    border-bottom: 3px solid transparent;
-    position: relative;
-    color: #ff0000;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    border-bottom: 3px solid #fff;
-    color: #ff0000;
-}
-
-.nav-link.active {
-    border-bottom: 3px solid #fff;
-} */
-
-/* .nav-link.active {
-    border-bottom: 3px solid #fff;
-} */
-
 .nav-link {
     position: relative;
     color: #fff;
@@ -40,7 +19,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
     background-color: #fff;
@@ -57,10 +36,16 @@
     transform: scaleX(1);
 }
 
+.nav-link.active:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 
 /* Carousel */
-.carousel-item {
-    height: 500px;
+.jumbotron.jumbotron-fluid.bg-cover {
+    height: 25rem;
 }
 
 .bg-cover {
@@ -106,22 +91,14 @@
 }
 
 @media (max-width: 576px) {
-    .carousel-item {
-        height: 250px;
-    }
-
-    .carousel-item img {
-        min-height: 250px;
+    .jumbotron.jumbotron-fluid.bg-cover {
+        height: 15rem;
     }
 }
 
 @media (max-width: 768px) {
-    .carousel-item {
-        height: 250px;
-    }
-
-    .carousel-item img {
-        min-height: 250px;
+    .jumbotron.jumbotron-fluid.bg-cover {
+        height: 20rem;
     }
 }
 
