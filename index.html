@@ -13,7 +13,7 @@
     <!-- MDB -->
     <link href="css/mdb.min.css" rel="stylesheet" />
     <!-- OverlayScrollbars -->
-    <link rel="stylesheet" href="dist/OverlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- <link rel="stylesheet" href="dist/OverlayScrollbars/css/OverlayScrollbars.min.css"/> -->
     <!-- My Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -27,8 +27,9 @@
     </style>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+<body id="beranda">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top" id="navbar-example2">
         <div class="container">
             <a class="navbar-brand fw-bolder" href="#">SD Negeri 016 Anggana</a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
@@ -38,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white active" aria-current="page" href="#">Beranda</a>
+                        <a class="nav-link text-white active" aria-current="page" href="#beranda">Beranda</a>
                     </li>
                     <!-- Navbar dropdown -->
                     <li class="nav-item dropdown">
@@ -67,12 +68,12 @@
                             <li><a class="dropdown-item" href="#">Ekstrakurikuler</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Guru & Staf</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#galeri">Galeri</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Guru & Staf</a>
                     <li class="nav-item my-lg-auto my-2 ms-lg-2 mx-auto border-0">
                         <a class="btn btn-warning btn-sm btn-rounded" href="#">PPDB</a>
                     </li>
@@ -119,9 +120,9 @@
 
     <section id="visimisi" class="py-5" style="background-color:rgb(240, 255, 240);">
         <div class="container">
-            <h1 class="text-center fw-bolder">Visi & Misi</h1>
+            <h1 class="text-center fw-bolder pt-3">Visi & Misi</h1>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 mb-3">
                     <h3 class="fw-bolder">Misi</h3>
                     <span>
                         1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
@@ -178,25 +179,63 @@
 
     <section id="galeri" class="py-5">
         <div class="container">
-            <h1 class="text-center fw-bolder">Galeri Sekolah</h1>
+            <h1 class="text-center fw-bolder py-3">Galeri Sekolah</h1>
             <div class="row">
-                <div class="col-md-6">
-                    <h3 class="fw-bolder">Misi</h3>
-                    <span>
-                        1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
-                        Tulis Al-Quran (BTA), berdo'a sebelum atau sesudah belajar dan ucapan salam terhadap guru. <br>
-                        2. Melaksanakan pembelajaran dengan pendekatan PAKEM dan Inkuiri. <br>
-                        3. Menerapkan pembelajaran yang berbasis Teknologi Informasi dan Komunikasi. <br>
-                        4. Mengembangkan bakat siswa dibidang seni dan olahraga seperti sepak takraw dan tarian
-                        daerah. <br>
-                        5. Membudayakan sikap <strong>senyum, sapa, salam, sopan, dan santun (5S)</strong> di
-                        lingkungan sekolah. <br>
-                    </span>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/1.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bolder">Visi</h3>
-                    <p class="text-uppercase">"Mewujudkan Generasi Penerus Bangsa Yang Beriman, berakhlak mulia, cerdas,
-                        sehat.</p>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/3.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/4.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/5.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/6.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/7.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="bg-image hover-overlay ripple">
+                        <img src="img/galeri/8.jpeg" class="img-fluid" />
+                        <a href="#!">
+                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,9 +284,9 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
     <!-- OverlayScrollbars -->
-    <script src="dist/OverlayScrollbars/js/OverlayScrollbars.min.js"></script>
+    <!-- <script src="dist/OverlayScrollbars/js/OverlayScrollbars.min.js"></script> -->
     <script>
-        $('body').overlayScrollbars({});
+        // $('body').overlayScrollbars({});
     </script>
 </body>
 
