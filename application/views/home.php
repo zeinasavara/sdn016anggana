@@ -1,5 +1,5 @@
 <section id="carousel">
-	<div class="jumbotron jumbotron-fluid bg-cover">
+	<div class="jumbotron jumbotron-fluid bg-cover" style="background-image: url('<?= site_url('assets/') ?>img/carousel.jpeg')">
 		<div class="overlay"></div>
 		<div class="container pt-lg-5 pt-sm-5 pt-5">
 			<h1 class="display-4 pt-lg-5 pt-sm-5 pt-5">Selamat Datang di
@@ -14,18 +14,13 @@
 <section id="sambutan" class="py-5">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-md-8 text-center text-md-start">
 				<h3 class="text-center font-weight-bold">Sambutan Kepala Sekolah</h3>
 				<h5 class="text-center font-weight-bold">SD Negeri 021 Tenggarong</h5>
-				<p class="font-weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-					nostrum aliquam esse inventore reiciendis. Illo, odio numquam modi voluptas, ratione optio non
-					amet aperiam itaque voluptatum voluptate quia! Obcaecati, tenetur.</p>
-				<p class="font-weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-					nostrum aliquam esse inventore reiciendis. Illo, odio numquam modi voluptas, ratione optio non
-					amet aperiam itaque voluptatum voluptate quia! Obcaecati, tenetur.</p>
+				<p class="font-weight-light">Welcome to SDN 016 Anggana!! Selamat datang di dunia pendidikan Nurul Fikri. Kami merasa sangat bangga mendapatkan perhatian dan kepercayaan dari Bapak-Ibu sekalian. Kami akan berupaya untuk dapat menjalankan amanah ini dengan baik agar pertanggung jawaban di hadapan Allah SWT kelak menjadi ringan. Selamat datang di dunia pendidikan Nurul Fikri. Kami merasa sangat bangga mendapatkan perhatian dan kepercayaan dari Bapak-Ibu sekalian. Kami akan berupaya untuk dapat menjalankan amanah ini dengan baik agar pertanggung jawaban di hadapan Allah SWT kelak menjadi ringan.Memasuki pergaulan global yang penuh dengan kompetisi ini, kita perlu menyiapkan mental anak-anak kita agar mampu bersaing dengan baik dengan memiliki moral/adab islami, kemandirian, kecerdasan, juga tentunya kreatifitas-inovasi sesuai tumbuh kembangnya.</p>
 			</div>
-			<div class="col-sm-4">
-				<img src="<?= site_url('assets/') ?>img/sambutan/headmaster.png" class="img-fluid rounded mx-auto d-block" alt="...">
+			<div class="col-md-4 text-center text-md-start">
+				<img src="<?= site_url('assets/') ?>img/kepsek.jpeg" class="img-fluid rounded mx-auto d-block" alt="Kepala Sekolah" style="width: 250px;">
 			</div>
 		</div>
 	</div>
@@ -169,6 +164,10 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid shadow-2-strong img-modal" alt="" />
+			<span class="pt-2 text-center">
+				<h5 class="text-uppercase fw-bold">Judul Gambar</h5>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dicta..</p>
+			</span>
 		</div>
 	</div>
 </div>

@@ -27,27 +27,26 @@
                 </div>
             </div>
             <div class="content pb-5">
-                <div class="row">
-                    <div class="col-8">
-                        <h3>Tujuan</h3>
-                        <p class="mb-0">1. Terwujudnya peserta didik yang beriman dan bertakwa kepada Tuhan yang Maha Esa dan berakhlah mulia.</p>
-                        <p class="mb-0">2. Tercapainya semua peserta didik dapat menjalankan ibadah dan membaca kitab suci Alqur an.</p>
-                        <p class="mb-0">3. Mempertahankan dan meningkatkan peringkat sekolah.</p>
-                        <p class="mb-0">4. Menjuarai lomba akademik lomba akademik yang diselenggarakan tingkat kecamatan, kabupaten, propinsi dan nasional.</p>
-                        <p class="mb-0">5. Memiliki Tim olahraga ( Atletik, sepak bola, sepak takraw dan renang ) yang handal, sehingga dapat mempertahankan prestasi. 6. Mengoptimalkan potensi keterampilan dan seni terutama seni tari.</p>
-                    </div>
-                    <div class="col-4">
-                        <img src="<?= site_url('assets/img/profile/2.jpeg') ?>" alt="foto_sekolah" class="img-thumbnail hover-shadow hover-zoom">
-                    </div>
-                    <div class="col-4 mt-5">
-                        <img src="<?= site_url('assets/img/profile/1.jpeg') ?>" alt="foto_sekolah" class="img-thumbnail hover-shadow hover-zoom">
-                    </div>
-                    <div class="col-8 mt-5">
-                        <h3>Profile Sekolah</h3>
-                        <p>
-                            SD Negeri 016 berdomisli di Jalan Delta Mahakam RT.13 di daerah pesisir Kecamatan Anggana yang berbatasan dengan selat makassar, ditengah-tengah pemukiman penduduk, yang secara geografis terletak di Desa Sepatin, Kecamatan Anggana dijangkau dengan memakai transportasi laut berupa perahu maupun speedboat, dengan biaya yang sangat mahal . Dengan lahan ukuran 35 m x 91 m, saat ini SD Negeri 016 memiliki 10 ruang kelas, 1 ruang perpustakaan, 1 ruang guru bergabung dengan ruang kepala sekolah, dan toilet yang terdiri 2 toilet untuk laki-laki dan 2 toilet untuk perempuan. Jumlah murid pada Tahun Pelajaran 2020/2021 sebanyak 150 orang dengan jumlah pendidik dan tenaga kependidikan 13 orang yang terdiri dari kepala sekolah PNS 1 orang, guru PNS sebanyak 6 orang, guru THL 4 orang, guru honor lokal sebanyak 3 orang, dan Pendidik agama islam 1 Orang. Dengan jumlah rombongan belajar sebanyak 9 rombel. Pada bagian administrasi, kepala sekolah melakukan pekerjaan administrasi dibantu oleh seorang staf tata usaha.
-                        </p>
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h3 class="fw-bolder">Misi</h3>
+                            <span>
+                                1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
+                                Tulis Al-Quran (BTA), berdo'a sebelum atau sesudah belajar dan ucapan salam terhadap guru. <br>
+                                2. Melaksanakan pembelajaran dengan pendekatan PAKEM dan Inkuiri. <br>
+                                3. Menerapkan pembelajaran yang berbasis Teknologi Informasi dan Komunikasi. <br>
+                                4. Mengembangkan bakat siswa dibidang seni dan olahraga seperti sepak takraw dan tarian
+                                daerah. <br>
+                                5. Membudayakan sikap <strong>senyum, sapa, salam, sopan, dan santun (5S)</strong> di
+                                lingkungan sekolah. <br>
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="fw-bolder">Visi</h3>
+                            <p class="text-uppercase">"Mewujudkan Generasi Penerus Bangsa Yang Beriman, berakhlak mulia, cerdas,
+                                sehat.</p>
+                        </div>
                     </div>
                 </div>
             </div>

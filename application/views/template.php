@@ -20,15 +20,19 @@
 
     <!-- My Style CSS -->
     <link rel="stylesheet" href="<?= site_url('assets/') ?>css/style.css">
-
-    <title>SDN 016 Anggana</title>
-    <link rel="shortcut icon" href="<?= site_url('assets/') ?>img/twh.png" />
-
-    <style type="text/css">
-        .bg-cover {
-            background-image: url('<?= site_url('assets/') ?>img/banner/banner1.jpg');
+    <style>
+        div#detail-ptk {
+            padding-right: 0 !important;
         }
     </style>
+
+    <!-- Meta Tag -->
+    <title>SD Negeri 016 Anggana</title>
+    <meta name="Description" content="SD Negeri 016 dengan motto yaitu SDN 016 ANGGANA 'BISA' Berahlak Indah Santun Amanah akan mengembangkan bakat dan minat seluruh peserta didiknya dalam mengembangkan kemampuan personalnya." />
+    <meta name="Keywords" content="SDN 016 Anggana, SD Anggana, 016 Anggana, SD 016 Anggana" />
+
+    <link rel="shortcut icon" href="<?= site_url('assets/') ?>img/twh.png" />
+
 </head>
 
 <body id="beranda">
@@ -52,8 +56,8 @@
                         </a>
                         <!-- Dropdown menu -->
                         <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown" style="min-width: 100%;">
-                            <li><a class="dropdown-item" href="<?= base_url('ptk/kalenderakademik') ?>">Tenaga Kependidikan</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('ptk/esktrakurikuler') ?>">Guru</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('ptk/tendik') ?>">Tenaga Kependidikan</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('ptk/gtk') ?>">Guru & Tenaga Kependidikan</a></li>
                         </ul>
                     </li>
                     <!-- Navbar dropdown -->
@@ -70,7 +74,7 @@
                     </li>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= base_url('#galeri') ?>">Galeri</a>
+                        <a class="nav-link text-white <?= $this->uri->segment(1) == 'galeri' ? 'active' : '' ?>" href="<?= $this->uri->segment(1) == '' ? base_url('#galeri') : base_url('galeri') ?>">Galeri</a>
                     </li>
                     <!-- Navbar dropdown -->
                     <li class="nav-item dropdown">
@@ -81,12 +85,12 @@
                         <!-- Dropdown menu -->
                         <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown" style="min-width: 100%;">
                             <li><a class="dropdown-item" href="<?= base_url('about/profile') ?>">Profile Sekolah</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('#visimisi') ?>">Visi & Misi</a></li>
+                            <li><a class="dropdown-item" href="<?= $this->uri->segment(1) == '' ? base_url('#visimisi') : base_url('about/visimisi') ?>">Visi & Misi</a></li>
                             <li><a class="dropdown-item" href="<?= base_url('about/struktur') ?>">Struktur Organisasi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item my-lg-auto my-2 mx-lg-2 mx-auto border-0">
-                        <a class="btn btn-primary btn-sm btn-rounded" href="<?= base_url('kontak') ?>">Hubungi Kami</a>
+                        <a class="btn btn-primary btn-sm btn-rounded" href="<?= base_url('hubungi') ?>">Hubungi Kami</a>
                     </li>
                 </ul>
             </div>
@@ -142,6 +146,25 @@
             var img = $('.img-gallery', this).attr('src')
             $('.img-modal').attr('src', img)
         })
+
+        jQuery(document).ready(function($) {
+            $(function() {
+                $(".galeri-konten .galeri-item").slice(0, 8).show();
+                $("body").on('click touchstart', '.galeri-konten .load-more', function(e) {
+                    $(".loading").removeClass('d-none');
+                    e.preventDefault();
+                    $(".galeri-konten .galeri-item:hidden").slice(0, 8).slideDown(function() {
+                        $(".loading").addClass('d-none');
+                    });
+                    if ($(".galeri-konten .galeri-item:hidden").length == 0) {
+                        $(".galeri-konten .load-more").css('visibility', 'hidden');
+                    }
+                    $('html,body').animate({
+                        scrollTop: $(this).offset().top
+                    }, 1000);
+                });
+            });
+        });
     </script>
 </body>
 

@@ -7,4 +7,14 @@ class About extends CI_Controller
     {
         $this->template->load('template', 'about/profilesekolah');
     }
+
+    public function visimisi()
+    {
+        $this->template->load('template', 'about/visimisi');
+    }
+
+    public function struktur()
+    {
+        $this->template->load('template', 'about/struktur');
+    }
 }
