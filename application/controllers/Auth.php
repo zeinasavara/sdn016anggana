@@ -39,7 +39,7 @@ class Auth extends CI_Controller
                     redirect('auth');
                 } else {
                     $this->session->set_flashdata('success', 'Login berhasil, Selamat datang Administrator.');
-                    redirect('admin');
+                    redirect('dashboard');
                 }
             } else {
                 $this->session->set_flashdata('fail', 'Username / password salah!');

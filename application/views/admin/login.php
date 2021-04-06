@@ -45,12 +45,12 @@
 
             <form action="<?= site_url('auth') ?>" method="post">
                 <div class="form-group has-feedback">
-                    <input name="username" type="username" class="form-control" placeholder="Username" autocomplete="off" value="<?= set_value('username'); ?>">
+                    <input name="username" type="username" class="form-control" placeholder="Username" value="<?= set_value('username'); ?>" autofocus>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     <?= form_error('username', '<p class="text-danger text-center">', '</p>') ?>
                 </div>
                 <div class="form-group has-feedback">
-                    <input name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
+                    <input name="password" type="password" class="form-control" placeholder="Password">
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     <?= form_error('password', '<p class="text-danger text-center">', '</p>') ?>
                 </div>
