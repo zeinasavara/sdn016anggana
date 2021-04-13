@@ -28,7 +28,7 @@
             </div>
             <div class="content pb-5">
                 <div class="row">
-                    <img src="<?= site_url('assets/img/kalender/kalender.jpg') ?>" alt="">
+                    <img src="<?= site_url('assets/img/kurikulum/' . $kalemik->kalemik) ?>" alt="<?= $kalemik->kalemik ?>">
                 </div>
             </div>
         </div>

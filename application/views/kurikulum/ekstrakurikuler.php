@@ -28,76 +28,18 @@
             </div>
             <div class="content pb-5">
                 <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4">
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/pramuka.jpeg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Pramuka</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/vocalgrup.jpg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Vocal Group</h5>
+                    <?php foreach ($ekskul->result() as $key => $eks) { ?>
+                        <div class="col">
+                            <div class="card text-center h-100 hover-shadow hover-zoom">
+                                <div class="bg-image">
+                                    <img src="<?= site_url('assets/img/kurikulum/' . $eks->thumbnail) ?>" class="w-100" style="height: 200px;" />
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $eks->ekskul ?></h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/karate.jpg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Karate</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/sepakbola.jpg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Sepak Bola</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/calistung.jpg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Calistung (Baca-Tulis-Hitung)</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/dokcil.jpeg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Dokcil (Dokter Cilik)</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card text-center h-100 hover-shadow hover-zoom">
-                            <div class="bg-image">
-                                <img src="<?= site_url('assets/img/ekskul/pai.jpg') ?>" class="w-100" />
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">PAI</h5>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

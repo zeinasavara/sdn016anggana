@@ -208,19 +208,7 @@
                     <li <?= $this->uri->segment(2) == '' ? 'class="active"' : '' ?>><a href="<?= base_url('dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                     <li class="header">POSTS</li>
                     <li <?= $this->uri->segment(1) == 'gtk' ? 'class="active"' : '' ?>><a href="<?= base_url('gtk') ?>"><i class="fa fa-users"></i> <span>GTK</span></a></li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Kurikulum</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Kalender Akademik</a></li>
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Ekstrakurikuler</a></li>
-                        </ul>
-                    </li>
+                    <li <?= $this->uri->segment(1) == 'kurikulum' ? 'class="active"' : '' ?>><a href="<?= base_url('kurikulum') ?>"><i class="fa fa-book"></i> <span>Kurikulum</span></a></li>
                     <li><a href="javascript:;"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
                     <li class="header">KONFIGURASI WEB</li>
                     <li><a href="javascript:;"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
