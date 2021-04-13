@@ -3,13 +3,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Ptk extends CI_Controller
 {
-    public function tendik()
+    public function __construct()
     {
-        $this->template->load('template', 'ptk/tendik');
+        parent::__construct();
+        $this->load->model('gtk_m');
     }
 
-    public function gtk()
+    public function guru()
     {
-        $this->template->load('template', 'ptk/gtk');
+        $data['guru'] = $this->gtk_m->get('gtk', 1, 'status', 1);
+        $this->template->load('template', 'gtk/guru', $data);
+    }
+
+    public function tendik()
+    {
+        $data['tendik'] = $this->gtk_m->get('gtk', 2, 'status', 1);
+        $this->template->load('template', 'gtk/tendik', $data);
     }
 }

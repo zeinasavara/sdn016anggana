@@ -23,9 +23,18 @@
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>plugins/sweetalert2/sweetalert2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
     <style>
         .swal2-modal {
             font-size: 10pt !important;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0;
         }
     </style>
 
@@ -65,7 +74,7 @@
                     <ul class="nav navbar-nav">
                         <!-- Kembali Ke Website -->
                         <li>
-                            <a href="<?= site_url() ?>">
+                            <a href="<?= site_url() ?>" target="_blank">
                                 <i class="fa fa-arrow-circle-left"></i> Lihat Website
                             </a>
                         </li>
@@ -198,19 +207,7 @@
                     <li class="header">MAIN NAVIGATION</li>
                     <li <?= $this->uri->segment(2) == '' ? 'class="active"' : '' ?>><a href="<?= base_url('dashboard') ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
                     <li class="header">POSTS</li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-users"></i>
-                            <span>PTK</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Tenaga Kependidikan</a></li>
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Guru</a></li>
-                        </ul>
-                    </li>
+                    <li <?= $this->uri->segment(1) == 'gtk' ? 'class="active"' : '' ?>><a href="<?= base_url('gtk') ?>"><i class="fa fa-users"></i> <span>GTK</span></a></li>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-book"></i>

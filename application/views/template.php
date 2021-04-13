@@ -51,13 +51,13 @@
                     <!-- Navbar dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white <?= $this->uri->segment(1) == 'ptk' ? 'active' : '' ?>" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                            PTK
+                            GTK
                             <i class="fas fa-caret-down"></i>
                         </a>
                         <!-- Dropdown menu -->
                         <ul class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown" style="min-width: 100%;">
+                            <li><a class="dropdown-item" href="<?= base_url('ptk/guru') ?>">Guru & Tenaga Kependidikan</a></li>
                             <li><a class="dropdown-item" href="<?= base_url('ptk/tendik') ?>">Tenaga Kependidikan</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('ptk/gtk') ?>">Guru & Tenaga Kependidikan</a></li>
                         </ul>
                     </li>
                     <!-- Navbar dropdown -->

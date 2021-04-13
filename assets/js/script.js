@@ -19,8 +19,6 @@ if (flash == 'Failed') {
 		title: 'Gagal',
 		text: flashData,
 		icon: 'error',
-		timer: 2000,
-		timerProgressBar: true,
 		confirmButtonText: 'Tutup',
 		confirmButtonColor: '#d33',
 		customClass: 'swal-wide'
@@ -59,6 +57,27 @@ $('.konfirLogout').on('click', function (e) {
 		showCancelButton: true,
 		confirmButtonColor: '#d33',
 		confirmButtonText: 'Logout',
+		cancelButtonText: 'Batal',
+		customClass: 'swal-wide'
+	}).then((result) => {
+		if (result) {
+            if (result.isConfirmed) {
+                document.location.href = href;
+            }
+		}
+	})
+});
+
+$('.konfirReset').on('click', function (e) {
+	e.preventDefault();
+	const href = $(this).attr('href');
+	Swal.fire({
+		title: 'Anda akan me-reset foto?',
+		text: "Pilih 'Reset' jika ingin menggunakan foto default dari sistem.",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonColor: '#d33',
+		confirmButtonText: 'Reset',
 		cancelButtonText: 'Batal',
 		customClass: 'swal-wide'
 	}).then((result) => {
