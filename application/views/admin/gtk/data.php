@@ -25,10 +25,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="dataTables" class="table table-bordered table-striped">
+                        <table id="dataTables" class="table table-bordered table-striped" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th width="5px">#</th>
                                     <th>Nama Lengkap</th>
                                     <th>NIP</th>
                                     <th>Jabatan</th>
@@ -40,12 +40,12 @@
                                 <?php $no = 1;
                                 foreach ($gtk->result() as $key => $g) { ?>
                                     <tr>
-                                        <td><?= $no++ ?></td>
+                                        <td width="5px"><?= $no++ ?></td>
                                         <td><?= $g->nama ?></td>
                                         <td><?= $g->nip ?? '<small class="text-danger">NIP tidak ada</small>' ?></td>
                                         <td><?= $g->jabatan ?></td>
                                         <td><span class="badge <?= $g->status == 1 ? 'bg-green' : 'bg-red' ?>"><?= $g->status == 1 ? 'Aktif' : 'Nonaktif' ?></span></td>
-                                        <td class="text-center">
+                                        <td class="text-center" style="white-space: nowrap;">
                                             <a href="<?= base_url('gtk/update/' . $g->id_gtk) ?>" class="btn btn-primary btn-xs">
                                                 <i class="fa fa-edit"></i>
                                             </a>
@@ -58,7 +58,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>#</th>
+                                    <th width="5px">#</th>
                                     <th>Nama Lengkap</th>
                                     <th>NIP</th>
                                     <th>Jabatan</th>

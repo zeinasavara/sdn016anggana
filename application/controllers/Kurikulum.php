@@ -35,7 +35,7 @@ class Kurikulum extends CI_Controller
 
     public function ekstrakurikuler()
     {
-        $data['ekskul'] = $this->kurikulum_m->get();
+        $data['ekskul'] = $this->kurikulum_m->get('status !=', 2);
         $this->template->load('template', 'kurikulum/ekstrakurikuler', $data);
     }
 

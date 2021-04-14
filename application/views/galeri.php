@@ -11,173 +11,52 @@
                     </nav>
                 </div>
             </div>
-            <div class="content pb-5">
+            <div class="content">
                 <section class="galeri-konten">
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
+                            <?php foreach ($row->result() as $key => $g) { ?>
+                                <div class="col-12 col-lg-3 col-md-4 col-sm-6 galeri-item">
+                                    <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#view<?= $g->id_galeri ?>">
+                                        <img src="<?= site_url('assets/img/galeri/' . $g->thumbnail) ?>" class="img-fluid img-gallery" alt="<?= $g->thumbnail ?>" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/3.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
+                                <!-- Modal Gallery -->
+                                <div class="modal fade" id="view<?= $g->id_galeri ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <img src="<?= site_url('assets/img/galeri/' . $g->thumbnail) ?>" class="img-fluid shadow-2-strong img-modal" alt="<?= $g->thumbnail ?>" />
+                                            <span class="pt-3 text-center">
+                                                <h5 class="text-uppercase fw-bold" style="margin-bottom: 0;"><?= $g->judul ?></h5>
+                                                <p style="font-size: 10pt; margin-bottom: 5px;"><?= $g->jabatan ?> - <?= date('d/m/Y', strtotime($g->created)) ?></p>
+                                                <p><?= $g->deskripsi ?></p>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/4.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/5.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/6.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/7.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/8.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/3.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/4.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/5.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/6.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/7.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/8.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/8.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-3 col-md-4 col-sm-6 mb-3 galeri-item">
-                                <div class="bg-image hover-overlay ripple item" data-mdb-ripple-color="success" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                                    <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid img-gallery" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(57, 192, 237, 0.2)"></div>
-                                    </a>
-                                </div>
-                            </div>
+                            <?php } ?>
 
-                            <div class="col-12 d-flex justify-content-center">
-                                <a href="<?= base_url('galeri') ?>" class="btn btn-primary load-more">Load more ... <span class="spinner-border spinner-border-sm loading d-none" role="status" aria-hidden="true"></span></a>
-                            </div>
+                            <nav class="mt-4 d-flex justify-content-center">
+                                <ul class="pagination pagination-circle">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fa fa-arrow-left"></i></a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link bg-success" href="#">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="fa fa-arrow-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </section>
-                <!-- Modal Gallery -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <img src="<?= site_url('assets/') ?>img/galeri/1.jpeg" class="img-fluid shadow-2-strong img-modal" alt="" />
-                            <span class="pt-2 text-center">
-                                <h5 class="text-uppercase fw-bold">Judul Gambar</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, dicta..</p>
-                            </span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

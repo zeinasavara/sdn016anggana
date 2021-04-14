@@ -209,7 +209,7 @@
                     <li class="header">POSTS</li>
                     <li <?= $this->uri->segment(1) == 'gtk' ? 'class="active"' : '' ?>><a href="<?= base_url('gtk') ?>"><i class="fa fa-users"></i> <span>GTK</span></a></li>
                     <li <?= $this->uri->segment(1) == 'kurikulum' ? 'class="active"' : '' ?>><a href="<?= base_url('kurikulum') ?>"><i class="fa fa-book"></i> <span>Kurikulum</span></a></li>
-                    <li><a href="javascript:;"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
+                    <li <?= $this->uri->segment(1) == 'galeri' ? 'class="active"' : '' ?>><a href="<?= base_url('galeri/data') ?>"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
                     <li class="header">KONFIGURASI WEB</li>
                     <li><a href="javascript:;"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
                     <li class="treeview">
@@ -270,7 +270,17 @@
     <!-- page script -->
     <script>
         $(function() {
-            $('#dataTables').DataTable()
+            $('#dataTables').DataTable({
+                "scrollX": true
+            })
+            $('#dataTables2').DataTable({
+                "pageLength": 5,
+                "lengthMenu": [
+                    [5, 25, 50, -1],
+                    [5, 25, 50, "All"]
+                ],
+                "scrollX": true
+            })
         })
     </script>
 </body>

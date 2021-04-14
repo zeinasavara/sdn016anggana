@@ -25,10 +25,10 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="dataTables" class="table table-bordered table-striped">
+                        <table id="dataTables" class="table table-bordered table-striped" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th width="5px">#</th>
                                     <th>Nama Lengkap</th>
                                     <th>Jabatan</th>
                                     <th>Username</th>
@@ -41,13 +41,13 @@
                                 <?php $no = 1;
                                 foreach ($user->result() as $key => $usr) { ?>
                                     <tr>
-                                        <td><?= $no++ ?></td>
+                                        <td width="5px"><?= $no++ ?></td>
                                         <td><?= $usr->full_name ?></td>
                                         <td><?= $usr->jabatan ?></td>
                                         <td><?= $usr->username ?></td>
                                         <td><?= $usr->password ?></td>
                                         <td><span class="badge bg-default"><?= $usr->role == 1 ? 'Admin' : 'User'; ?></span></td>
-                                        <td class="text-center">
+                                        <td class="text-center" style="white-space: nowrap;">
                                             <a href="<?= base_url('pengguna/update/' . $usr->id_user) ?>" class="btn btn-primary btn-xs">
                                                 <i class="fa fa-edit"></i>
                                             </a>
@@ -60,7 +60,7 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>#</th>
+                                    <th width="5px">#</th>
                                     <th>Nama Lengkap</th>
                                     <th>Jabatan</th>
                                     <th>Username</th>

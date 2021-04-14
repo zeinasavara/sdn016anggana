@@ -26,7 +26,7 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <table id="dataTables" class="table table-bordered table-striped">
+                        <table id="dataTables" class="table table-bordered table-striped" style="width:100%">
                             <thead>
                                 <tr>
                                     <th class="text-center" width="5px">#</th>
@@ -41,8 +41,8 @@
                                     <tr>
                                         <td class="text-center"><?= $no++ ?></td>
                                         <td><?= $kur->ekskul ?></td>
-                                        <td class="text-center"><span class="badge <?= $kur->status == 1 ? 'bg-green' : 'bg-red' ?>"><?= $kur->status == 1 ? 'Aktif' : 'Nonaktif' ?></span></td>s
-                                        <td class="text-center">
+                                        <td class="text-center"><span class="badge <?= $kur->status == 1 ? 'bg-green' : 'bg-red' ?>"><?= $kur->status == 1 ? 'Aktif' : 'Nonaktif' ?></span></td>
+                                        <td class="text-center" style="white-space: nowrap;">
                                             <a href="<?= base_url('kurikulum/update/' . $kur->id_kurikulum) ?>" class="btn btn-primary btn-xs">
                                                 <i class="fa fa-edit"></i>
                                             </a>

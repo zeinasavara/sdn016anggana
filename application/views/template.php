@@ -159,9 +159,9 @@
                     if ($(".galeri-konten .galeri-item:hidden").length == 0) {
                         $(".galeri-konten .load-more").css('visibility', 'hidden');
                     }
-                    $('html,body').animate({
-                        scrollTop: $(this).offset().top
-                    }, 1000);
+                    // $('html,body').animate({
+                    //     scrollTop: $(this).offset().top
+                    // }, 1000);
                 });
             });
         });

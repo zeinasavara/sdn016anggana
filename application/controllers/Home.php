@@ -5,6 +5,12 @@ class Home extends CI_Controller
 {
 	public function index()
 	{
-		$this->template->load('template', 'home');
+		$this->load->model('galeri_m');
+
+		$data = [
+			'galeri' => $this->galeri_m->getLimit()
+		];
+
+		$this->template->load('template', 'home', $data);
 	}
 }

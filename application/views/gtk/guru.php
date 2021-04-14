@@ -5,8 +5,8 @@
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
-                        <h1 class="mb-3">PTK</h1>
-                        <h4 class="mb-3">Guru & Tenaga Kependidikan</h4>
+                        <h1 class="mb-3">Guru & Tenaga Kependidikan</h1>
+                        <h4 class="mb-3">Guru</h4>
                     </div>
                 </div>
             </div>
