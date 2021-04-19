@@ -33,8 +33,7 @@ $('.konfirHapus').on('click', function (e) {
 		text: "Data tidak bisa dikembalikan jika sudah terhapus.",
 		icon: 'warning',
 		showCancelButton: true,
-		confirmButtonColor: '#3085d6',
-		cancelButtonColor: '#d33',
+		confirmButtonColor: '#008000',
 		confirmButtonText: 'Hapus data!',
 		cancelButtonText: 'Batal',
 		customClass: 'swal-wide'

@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>plugins/sweetalert2/sweetalert2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-
     <style>
         .swal2-modal {
             font-size: 10pt !important;
@@ -211,6 +210,7 @@
                     <li <?= $this->uri->segment(1) == 'kurikulum' ? 'class="active"' : '' ?>><a href="<?= base_url('kurikulum') ?>"><i class="fa fa-book"></i> <span>Kurikulum</span></a></li>
                     <li <?= $this->uri->segment(1) == 'galeri' ? 'class="active"' : '' ?>><a href="<?= base_url('galeri/data') ?>"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
                     <li class="header">KONFIGURASI WEB</li>
+                    <li <?= $this->uri->segment(1) == 'setting' ? 'class="active"' : '' ?>><a href="<?= base_url('setting') ?>"><i class="fa fa-gears"></i> <span>Setting</span></a></li>
                     <li><a href="javascript:;"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
                     <li class="treeview">
                         <a href="#">
@@ -265,6 +265,8 @@
     <!-- DataTables -->
     <script src="<?= site_url('assets/admin/') ?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?= site_url('assets/admin/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- CK Editor -->
+    <script src="<?= site_url('assets/admin/') ?>/bower_components/ckeditor/ckeditor.js"></script>
     <!-- My Script -->
     <script src="<?= site_url('assets/js/') ?>script.js"></script>
     <!-- page script -->
@@ -281,6 +283,13 @@
                 ],
                 "scrollX": true
             })
+        })
+
+        $(function() {
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace('editor1')
+            CKEDITOR.replace('editor2')
         })
     </script>
 </body>

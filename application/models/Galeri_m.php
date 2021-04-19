@@ -23,7 +23,7 @@ class galeri_m extends CI_Model
         $this->db->select('tb_galeri.*, tb_users.jabatan');
         $this->db->join('tb_users', 'tb_users.id_user = tb_galeri.id_user');
         $this->db->from('tb_galeri');
-        $this->db->limit(4);
+        $this->db->limit(8);
         return $this->db->get();
     }
 

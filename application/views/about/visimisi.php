@@ -30,26 +30,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <h3 class="fw-bolder">Misi</h3>
-                            <span>
-                                1. Menumbuhkembangkan ajaran agama islam melalui berbagai kegiatan keagamaan seperti Baca
-                                Tulis Al-Quran (BTA), berdo'a sebelum atau sesudah belajar dan ucapan salam terhadap guru. <br>
-                                2. Melaksanakan pembelajaran dengan pendekatan PAKEM dan Inkuiri. <br>
-                                3. Menerapkan pembelajaran yang berbasis Teknologi Informasi dan Komunikasi. <br>
-                                4. Mengembangkan bakat siswa dibidang seni dan olahraga seperti sepak takraw dan tarian
-                                daerah. <br>
-                                5. Membudayakan sikap <strong>senyum, sapa, salam, sopan, dan santun (5S)</strong> di
-                                lingkungan sekolah. <br>
-                            </span>
+                            <?= $row->visi ?>
                         </div>
                         <div class="col-md-6">
-                            <h3 class="fw-bolder">Visi</h3>
-                            <p class="text-uppercase">"Mewujudkan Generasi Penerus Bangsa Yang Beriman, berakhlak mulia, cerdas,
-                                sehat.</p>
+                            <?= $row->misi ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

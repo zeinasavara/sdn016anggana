@@ -31,7 +31,7 @@ class Galeri extends CI_Controller
     public function index()
     {
         $data = [
-            'row' => $this->galeri_m->get()
+            'row' => $this->galeri_m->getLimit()
         ];
         $this->template->load('template', 'galeri', $data);
     }

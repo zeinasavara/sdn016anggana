@@ -28,7 +28,7 @@
             </div>
             <div class="content pb-5">
                 <div class="row">
-                    <img src="<?= site_url('assets/img/struktur.jpeg') ?>" alt="">
+                    <img src="<?= site_url('assets/img/' . $row->struktur_organisasi) ?>" alt="">
                 </div>
             </div>
         </div>
