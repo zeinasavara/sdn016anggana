@@ -1,22 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class setting_M extends CI_Model
+class Setting_m extends CI_Model
 {
-    public function getProfile($params = null, $value = null)
-    {
-
-        if ($params != null && $value != null) {
-            $this->db->where($params, $value);
-        }
-
-        $this->db->order_by('id_profilesekolah', 'DESC');
-        $this->db->select('*');
-        $this->db->from('tb_profilesekolah');
-        return $this->db->get();
-    }
-
-    public function getSVM($params = null, $value = null)
+    public function get($params = null, $value = null)
     {
 
         if ($params != null && $value != null) {
@@ -24,50 +11,60 @@ class setting_M extends CI_Model
         }
 
         $this->db->select('*');
-        $this->db->from('tb_strukturvisimisi');
+        $this->db->from('tb_setting');
         return $this->db->get();
     }
 
-    public function addprf($post)
+    public function update($post)
     {
-        $params['title']        = $post['title'];
-        $params['description']  = $post['description'];
-        $params['status']       = $post['status'];
-        $this->db->insert('tb_profilesekolah', $params);
-    }
-
-    public function updateprf($post)
-    {
-        $params['title']        = $post['title'];
-        $params['description']  = $post['description'];
-        $params['status']       = $post['status'];
+        $params['nama_website']     = $post['nama_website'];
+        $params['meta_title']       = $post['meta_title'];
+        // $params['icon_title']       = $post['icon_title'];
+        $params['meta_desc']        = $post['meta_desc'];
+        $params['meta_keyword']     = $post['meta_keyword'];
+        // $params['jumbotron']        = $post['jumbotron'];
+        $params['jumbotron_title']  = $post['jumbotron_title'];
+        // $params['foto_kepsek']      = $post['foto_kepsek'];
+        $params['sambutan']         = $post['sambutan'];
+        $params['alamat']           = $post['alamat'];
+        $params['email']            = $post['email'];
+        $params['telepon']          = $post['telepon'];
+        // $params['head_img']         = $post['head_img'];
 
         $this->db->set($params);
-        $this->db->where('id_profilesekolah', $post['id_profilesekolah']);
-        $this->db->update('tb_profilesekolah');
+        $this->db->where('id_setting', 1);
+        $this->db->update('tb_setting');
     }
 
-    public function upSVM($post)
+    public function changeJumbotron($post)
     {
-        $params['visi'] = $post['visi'];
-        $params['misi'] = $post['misi'];
-
+        $params['jumbotron']     = $post['jumbotron'];
         $this->db->set($params);
-        $this->db->where('id_strukturvisimisi', 1);
-        $this->db->update('tb_strukturvisimisi');
+        $this->db->where('id_setting', 1);
+        $this->db->update('tb_setting');
     }
 
-    public function changeStruktur($post)
+    public function changeHeader($post)
     {
-        $params['struktur_organisasi']     = $post['struktur_organisasi'];
+        $params['head_img']     = $post['head_img'];
         $this->db->set($params);
-        $this->db->where('id_strukturvisimisi', 1);
-        $this->db->update('tb_strukturvisimisi');
+        $this->db->where('id_setting', 1);
+        $this->db->update('tb_setting');
     }
 
-    public function hapusPrf($id)
+    public function changeIcon($post)
     {
-        $this->db->where('id_profilesekolah', $id);
-        $this->db->delete('tb_profilesekolah');
+        $params['icon_title']     = $post['icon_title'];
+        $this->db->set($params);
+        $this->db->where('id_setting', 1);
+        $this->db->update('tb_setting');
+    }
+
+    public function changeFotoKepsek($post)
+    {
+        $params['foto_kepsek']     = $post['foto_kepsek'];
+        $this->db->set($params);
+        $this->db->where('id_setting', 1);
+        $this->db->update('tb_setting');
     }
 }

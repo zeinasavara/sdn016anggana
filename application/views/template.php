@@ -27,11 +27,11 @@
     </style>
 
     <!-- Meta Tag -->
-    <title>SD Negeri 016 Anggana</title>
-    <meta name="Description" content="SD Negeri 016 dengan motto yaitu SDN 016 ANGGANA 'BISA' Berahlak Indah Santun Amanah akan mengembangkan bakat dan minat seluruh peserta didiknya dalam mengembangkan kemampuan personalnya." />
-    <meta name="Keywords" content="SDN 016 Anggana, SD Anggana, 016 Anggana, SD 016 Anggana" />
+    <title><?= $this->fungsi->setting()->nama_website ?></title>
+    <meta name="Description" content="<?= $this->fungsi->setting()->meta_desc ?>" />
+    <meta name="Keywords" content="<?= $this->fungsi->setting()->meta_keyword ?>" />
 
-    <link rel="shortcut icon" href="<?= site_url('assets/') ?>img/twh.png" />
+    <link rel="shortcut icon" href="<?= site_url('assets/img/' . $this->fungsi->setting()->icon_title) ?>" />
 
 </head>
 
@@ -39,7 +39,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top" id="navbar-example2">
         <div class="container">
-            <a class="navbar-brand fw-bolder" href="<?= site_url() ?>">SD Negeri 016 Anggana</a>
+            <a class="navbar-brand fw-bolder" href="<?= site_url() ?>"><?= $this->fungsi->setting()->nama_website ?></a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -92,6 +92,9 @@
                     <li class="nav-item my-lg-auto my-2 mx-lg-2 mx-auto border-0">
                         <a class="btn btn-primary btn-sm btn-rounded" href="<?= base_url('hubungi') ?>">Hubungi Kami</a>
                     </li>
+                    <li class="nav-item my-lg-auto mx-auto border-0">
+                        <a class="btn btn-warning btn-sm btn-rounded" href="<?= base_url('auth') ?>">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -108,15 +111,14 @@
                 <!--Grid column-->
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-4">
                     <h3 class="text-uppercase fw-bold">Kontak</h3>
-                    <h5 class="text-uppercase">SD Negeri 016 Anggana</h5>
+                    <h5 class="text-uppercase"><?= $this->fungsi->setting()->nama_website ?></h5>
 
                     <span class="fw-bold">Email</span>
-                    <p class="mb-0"><a href="mailto:sdn016anggana@gmail.com" class="text-white">sdn016anggana@gmail.com</a></p>
+                    <p class="mb-0"><a href="mailto:<?= $this->fungsi->setting()->email ?>" class="text-white"><?= $this->fungsi->setting()->email ?></a></p>
                     <span class="fw-bold">Telepon</span>
-                    <p class="mb-0">+62-21 8932 3188</p>
+                    <p class="mb-0"><?= $this->fungsi->setting()->telepon ?></p>
                     <span class="fw-bold">Alamat</span>
-                    <p class="mb-0">RT 07 Sepatin, Sepatin, Kec. Anggana, Kab. Kutai Kartanegara Prov. Kalimantan Timur
-                        - Indonesia</p>
+                    <p class="mb-0"><?= $this->fungsi->setting()->alamat ?></p>
                 </div>
                 <!--Grid column-->
 
@@ -130,7 +132,7 @@
             <!--Grid row-->
         </div>
         <!-- Grid container -->
-        <p class="text-center mt-3">© 2021 SD Negeri 016 Anggana. All Rights Reserved</p>
+        <p class="text-center mt-3">© 2021 <?= $this->fungsi->setting()->nama_website ?>. All Rights Reserved</p>
     </footer>
 
     <!-- JQuery -->

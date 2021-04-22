@@ -16,4 +16,11 @@ class Fungsi
         $user = $this->ci->user_m->get('id_user', $id_user)->row();
         return $user;
     }
+
+    function setting()
+    {
+        $this->ci->load->model('setting_m');
+        $setting = $this->ci->setting_m->get('id_setting', 1)->row();
+        return $setting;
+    }
 }

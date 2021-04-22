@@ -7,13 +7,13 @@ class About extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('setting_m');
+        $this->load->model('tentangkami_m');
     }
 
     public function profile()
     {
         $data = [
-            'row' => $this->setting_m->getProfile('status', 1)
+            'row' => $this->tentangkami_m->getProfile('status', 1)
         ];
         $this->template->load('template', 'about/profilesekolah', $data);
     }
@@ -21,7 +21,7 @@ class About extends CI_Controller
     public function visimisi()
     {
         $data = [
-            'row' => $this->setting_m->getSVM()->row()
+            'row' => $this->tentangkami_m->getSVM()->row()
         ];
         $this->template->load('template', 'about/visimisi', $data);
     }
@@ -29,7 +29,7 @@ class About extends CI_Controller
     public function struktur()
     {
         $data = [
-            'row' => $this->setting_m->getSVM()->row()
+            'row' => $this->tentangkami_m->getSVM()->row()
         ];
         $this->template->load('template', 'about/struktur', $data);
     }

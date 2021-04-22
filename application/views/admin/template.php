@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SDN 016 Anggana | Dashboard</title>
-    <link rel="shortcut icon" href="<?= site_url('assets/') ?>img/twh.png" />
+
+    <title>SDN 016 Anggana | CPanel</title>
+
+    <link rel="shortcut icon" href="<?= site_url('assets/img/' . $this->fungsi->setting()->icon_title) ?>" />
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -23,6 +26,8 @@
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>plugins/sweetalert2/sweetalert2.min.css">
     <!-- DataTables -->
     <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Froala Editor -->
+    <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>bower_components/froala_editor/css/froala_editor.css">
     <style>
         .swal2-modal {
             font-size: 10pt !important;
@@ -210,22 +215,9 @@
                     <li <?= $this->uri->segment(1) == 'kurikulum' ? 'class="active"' : '' ?>><a href="<?= base_url('kurikulum') ?>"><i class="fa fa-book"></i> <span>Kurikulum</span></a></li>
                     <li <?= $this->uri->segment(1) == 'galeri' ? 'class="active"' : '' ?>><a href="<?= base_url('galeri/data') ?>"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
                     <li class="header">KONFIGURASI WEB</li>
-                    <li <?= $this->uri->segment(1) == 'setting' ? 'class="active"' : '' ?>><a href="<?= base_url('setting') ?>"><i class="fa fa-gears"></i> <span>Setting</span></a></li>
+                    <li <?= $this->uri->segment(1) == 'tentangkami' ? 'class="active"' : '' ?>><a href="<?= base_url('tentangkami') ?>"><i class="fa fa-address-card"></i> <span>Tentang Kami</span></a></li>
                     <li><a href="javascript:;"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-address-card"></i>
-                            <span>Tentang Kami</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Profile Sekolah</a></li>
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Visi & Misi</a></li>
-                            <li><a href="javascript:;"><i class="fa fa-circle-o"></i> Struktur Organisasi</a></li>
-                        </ul>
-                    </li>
+                    <li <?= $this->uri->segment(1) == 'setting' ? 'class="active"' : '' ?>><a href="<?= base_url('setting') ?>"><i class="fa fa-gears"></i> <span>Setting</span></a></li>
                     <?php if ($this->fungsi->user_login()->role == 1) : ?>
                         <li class="header">PENGATURAN</li>
                         <li <?= $this->uri->segment(2) == 'pengguna' ? 'class="active"' : '' ?>><a href="<?= base_url('pengguna') ?>"><i class="fa fa-users"></i> <span>Akses Pengguna</span></a></li>
@@ -267,6 +259,10 @@
     <script src="<?= site_url('assets/admin/') ?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <!-- CK Editor -->
     <script src="<?= site_url('assets/admin/') ?>/bower_components/ckeditor/ckeditor.js"></script>
+    <!-- Froala Editor -->
+    <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/froala_editor.min.js"></script>
+    <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/plugins/align.min.js"></script>
+    <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/plugins/paragraph_format.min.js"></script>
     <!-- My Script -->
     <script src="<?= site_url('assets/js/') ?>script.js"></script>
     <!-- page script -->
@@ -291,7 +287,10 @@
             CKEDITOR.replace('editor1')
             CKEDITOR.replace('editor2')
         })
+
+        new FroalaEditor('textarea#froala-editor')
     </script>
+
 </body>
 
 </html>

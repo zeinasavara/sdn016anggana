@@ -1,7 +1,7 @@
 <div class="wrapper">
     <header>
         <!-- Background image -->
-        <div class="p-5 text-center bg-image" style="background-image: url('<?= site_url('assets/img/header/') ?>1.jpeg'); height: 400px;">
+        <div class="p-5 text-center bg-image" style="background-image: url('<?= site_url('assets/img/' . $this->fungsi->setting()->head_img) ?>'); height: 400px;">
             <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
