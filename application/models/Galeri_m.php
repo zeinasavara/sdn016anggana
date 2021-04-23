@@ -17,14 +17,12 @@ class galeri_m extends CI_Model
         return $this->db->get();
     }
 
-    public function getLimit()
+    public function getGaleri($limit, $start)
     {
-        $this->db->order_by('id_galeri', 'DESC');
+        $this->db->order_by('tb_galeri.tgl', 'DESC');
         $this->db->select('tb_galeri.*, tb_users.jabatan');
         $this->db->join('tb_users', 'tb_users.id_user = tb_galeri.id_user');
-        $this->db->from('tb_galeri');
-        $this->db->limit(8);
-        return $this->db->get();
+        return $this->db->get('tb_galeri', $limit, $start);
     }
 
     public function add($post)
@@ -44,6 +42,7 @@ class galeri_m extends CI_Model
         }
         $params['judul']         = ucwords($post['judul']);
         $params['deskripsi']     = $post['deskripsi'];
+        $params['tgl']           = $post['tgl'];
         $params['updated']       = date('Y-m-d H:i:s', time());
 
         $this->db->set($params);

@@ -80,19 +80,7 @@
                 </div>
 
                 <nav class="mt-4 d-flex justify-content-center">
-                    <ul class="pagination pagination-circle">
-                        <li class="page-item">
-                            <a class="page-link" href="#"><i class="fa fa-arrow-left"></i></a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link bg-success" href="#">1</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </li>
-                    </ul>
+                    <?= $this->pagination->create_links(); ?>
                 </nav>
             </div>
         </div>

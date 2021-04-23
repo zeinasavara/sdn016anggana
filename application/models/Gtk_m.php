@@ -19,6 +19,12 @@ class Gtk_m extends CI_Model
         return $this->db->get();
     }
 
+    public function getGTK($params, $value, $params2, $value2, $limit, $start)
+    {
+        $this->db->where($params, $value);
+        return $this->db->get('tb_gtk', $limit, $start);
+    }
+
     public function add($post)
     {
         $params['nama']     = $post['nama'];

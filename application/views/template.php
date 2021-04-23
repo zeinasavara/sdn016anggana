@@ -12,6 +12,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
 
+    <!-- SweetAlert 2 -->
+    <link rel="stylesheet" href="<?= site_url('assets/admin/') ?>plugins/sweetalert2/sweetalert2.min.css">
+
     <!-- MDB -->
     <link href="<?= site_url('assets/') ?>css/mdb.min.css" rel="stylesheet" />
 
@@ -140,6 +143,12 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="<?= site_url('assets/') ?>js/mdb.min.js"></script>
+
+    <!-- SweetAlert 2 -->
+    <script src="<?= site_url('assets/admin/') ?>plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- My Script -->
+    <script src="<?= site_url('assets/js/') ?>script.js"></script>
 
     <!-- OverlayScrollbars -->
     <!-- <script src="dist/OverlayScrollbars/js/OverlayScrollbars.min.js"></script> -->

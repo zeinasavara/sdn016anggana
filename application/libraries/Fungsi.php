@@ -23,4 +23,11 @@ class Fungsi
         $setting = $this->ci->setting_m->get('id_setting', 1)->row();
         return $setting;
     }
+
+    function inbox()
+    {
+        $this->ci->load->model('inbox_m');
+        $inbox = $this->ci->inbox_m->get('status', 1)->result();
+        return $inbox;
+    }
 }

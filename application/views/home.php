@@ -51,19 +51,19 @@
 				<div class="col-lg-3 col-md-6 mt-3">
 					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">151+
 					</h2>
-					<h4 class="text-center">Siswa</h4>
+					<h4 class="text-center">Peserta Didik</h4>
 				</div>
 				<div class="col-lg-3 col-md-6 mt-3">
-					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">12+</h2>
-					<h4 class="text-center">Guru Mengajar</h4>
+					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);"><?= count($guru) ?></h2>
+					<h4 class="text-center">Guru</h4>
+				</div>
+				<div class="col-lg-3 col-md-6 mt-3">
+					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);"><?= count($tendik) ?></h2>
+					<h4 class="text-center">Tenaga Kependidikan</h4>
 				</div>
 				<div class="col-lg-3 col-md-6 mt-3">
 					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">9+</h2>
 					<h4 class="text-center">Rombel</h4>
-				</div>
-				<div class="col-lg-3 col-md-6 mt-3">
-					<h2 class="font-weight-bold text-center" style="text-shadow: 1px 1px 3px rgb(0, 0, 0);">85+</h2>
-					<h4 class="text-center">Mapel</h4>
 				</div>
 			</div>
 		</div>
@@ -90,7 +90,7 @@
 							<img src="<?= site_url('assets/img/galeri/' . $g->thumbnail) ?>" class="img-fluid shadow-2-strong img-modal" alt="<?= $g->thumbnail ?>" />
 							<span class="pt-3 text-center">
 								<h5 class="text-uppercase fw-bold" style="margin-bottom: 0;"><?= $g->judul ?></h5>
-								<p style="font-size: 10pt; margin-bottom: 5px;"><?= $g->jabatan ?> - <?= date('d/m/Y', strtotime($g->created)) ?></p>
+								<p style="font-size: 10pt; margin-bottom: 5px;"><?= $g->jabatan ?> - <?= date('d/m/Y', strtotime($g->tgl)) ?></p>
 								<p><?= $g->deskripsi ?></p>
 							</span>
 						</div>

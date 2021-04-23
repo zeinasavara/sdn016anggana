@@ -8,11 +8,15 @@ class Dashboard extends CI_Controller
         parent::__construct();
         belum_login();
 
-        $this->load->model('user_m');
+        $this->load->model(['gtk_m']);
     }
 
     public function index()
     {
-        $this->template->load('admin/template', 'admin/dashboard');
+        $data = [
+            'guru' => $this->gtk_m->get('gtk', 1)->result(),
+            'tendik' => $this->gtk_m->get('gtk', 2)->result(),
+        ];
+        $this->template->load('admin/template', 'admin/dashboard', $data);
     }
 }

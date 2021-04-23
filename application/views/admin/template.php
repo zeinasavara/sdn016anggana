@@ -86,90 +86,51 @@
                         <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">4</span>
+                                <?php if (count($this->fungsi->inbox()) != NULL) { ?>
+                                    <span class="label label-warning"><?= count($this->fungsi->inbox()) ?></span>
+                                <?php } ?>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="header">You have 4 messages</li>
+                                <?php if (count($this->fungsi->inbox()) != NULL) { ?>
+                                    <li class="header">Anda mendapat <?= count($this->fungsi->inbox()) ?> pesan baru.</li>
+                                <?php } else { ?>
+                                    <li class="header text-center">Tidak ada pesan masuk</li>
+                                <?php } ?>
                                 <li>
                                     <!-- inner menu: contains the actual data -->
                                     <ul class="menu">
-                                        <li>
-                                            <!-- start message -->
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <h4>
-                                                    Support Team
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <!-- end message -->
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <h4>
-                                                    AdminLTE Design Team
-                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <h4>
-                                                    Developers
-                                                    <small><i class="fa fa-clock-o"></i> Today</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <h4>
-                                                    Sales Department
-                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                                                </div>
-                                                <h4>
-                                                    Reviewers
-                                                    <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                                </h4>
-                                                <p>Why not buy a new awesome theme?</p>
-                                            </a>
-                                        </li>
+                                        <?php foreach ($this->fungsi->inbox() as $key => $inbox) { ?>
+                                            <li>
+                                                <!-- start message -->
+                                                <a href="#">
+                                                    <div class="pull-left">
+                                                        <img src="<?= site_url('assets/img/visitors.png') ?>" class="img-circle" alt="User Image">
+                                                    </div>
+                                                    <h4>
+                                                        <?= $inbox->nama_lengkap ?>
+                                                        <small><i class="fa fa-clock-o"></i> <?= date('i', time()) - date('i', strtotime($inbox->sent))  ?> mins</small>
+                                                    </h4>
+                                                    <p><?= substr($inbox->pesan, 0, 30) . ' ....' ?></p>
+                                                    <p><?= date('d F Y H:i:s', time()) ?></p>
+                                                </a>
+                                            </li>
+                                            <!-- end message -->
+                                        <?php } ?>
                                     </ul>
                                 </li>
-                                <li class="footer"><a href="#">See All Messages</a></li>
+                                <li class="footer"><a href="<?= base_url('inbox') ?>">Lihat Semua Pesan</a></li>
                             </ul>
                         </li>
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="<?= site_url('assets/admin/') ?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs">Administrator</span>
+                                <img src="<?= site_url('assets/img/admin.png') ?>" class="user-image" alt="User Image">
+                                <span class="hidden-xs"><?= $this->fungsi->user_login()->full_name ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="<?= site_url('assets/admin/') ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="<?= site_url('assets/img/admin.png') ?>" class="img-circle" alt="User Image">
 
                                     <p class="text-capitalize">
                                         <?= $this->fungsi->user_login()->full_name ?> - <?= $this->fungsi->user_login()->jabatan ? $this->fungsi->user_login()->jabatan : 'Null' ?>
@@ -199,7 +160,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="<?= site_url('assets/admin/') ?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="<?= site_url('assets/img/admin.png') ?>" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p class="text-capitalize"><?= $this->fungsi->user_login()->full_name ?></p>
@@ -216,7 +177,7 @@
                     <li <?= $this->uri->segment(1) == 'galeri' ? 'class="active"' : '' ?>><a href="<?= base_url('galeri/data') ?>"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
                     <li class="header">KONFIGURASI WEB</li>
                     <li <?= $this->uri->segment(1) == 'tentangkami' ? 'class="active"' : '' ?>><a href="<?= base_url('tentangkami') ?>"><i class="fa fa-address-card"></i> <span>Tentang Kami</span></a></li>
-                    <li><a href="javascript:;"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
+                    <li><a href="<?= base_url('inbox') ?>"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
                     <li <?= $this->uri->segment(1) == 'setting' ? 'class="active"' : '' ?>><a href="<?= base_url('setting') ?>"><i class="fa fa-gears"></i> <span>Setting</span></a></li>
                     <?php if ($this->fungsi->user_login()->role == 1) : ?>
                         <li class="header">PENGATURAN</li>
@@ -263,12 +224,17 @@
     <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/froala_editor.min.js"></script>
     <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/plugins/align.min.js"></script>
     <script type="text/javascript" src="<?= site_url('assets/admin/') ?>bower_components/froala_editor/js/plugins/paragraph_format.min.js"></script>
+    <!-- ChartJS -->
+    <script src="<?= site_url('assets/admin/') ?>bower_components/chart.js/Chart.js"></script>
     <!-- My Script -->
     <script src="<?= site_url('assets/js/') ?>script.js"></script>
     <!-- page script -->
     <script>
         $(function() {
             $('#dataTables').DataTable({
+                "scrollX": true
+            })
+            $('#dataTables1').DataTable({
                 "scrollX": true
             })
             $('#dataTables2').DataTable({
@@ -289,6 +255,80 @@
         })
 
         new FroalaEditor('textarea#froala-editor')
+    </script>
+
+    <script>
+        $(function() {
+            /* ChartJS
+             * -------
+             * Here we will create a few charts using ChartJS
+             */
+
+            var areaChartData = {
+                labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktoner', 'November', 'Desember'],
+                datasets: [{
+                        label: 'Pengunjung',
+                        fillColor: 'rgba(210, 214, 222, 1)',
+                        strokeColor: 'rgba(210, 214, 222, 1)',
+                        pointColor: 'rgba(210, 214, 222, 1)',
+                        pointStrokeColor: '#c1c7d1',
+                        pointHighlightFill: '#fff',
+                        pointHighlightStroke: 'rgba(220,220,220,1)',
+                        data: [65, 59, 80, 81, 56, 55, 40, 23, 15, 22, 25, 12]
+                    },
+                    {
+                        label: 'Pesan Masuk',
+                        fillColor: 'rgba(60,141,188,0.9)',
+                        strokeColor: 'rgba(60,141,188,0.8)',
+                        pointColor: '#3b8bba',
+                        pointStrokeColor: 'rgba(60,141,188,1)',
+                        pointHighlightFill: '#fff',
+                        pointHighlightStroke: 'rgba(60,141,188,1)',
+                        data: [28, 48, 40, 19, 86, 27, 90, 12, 34, 54, 34, 19]
+                    }
+                ]
+            }
+
+            //-------------
+            //- BAR CHART -
+            //-------------
+            var barChartCanvas = $('#barChart').get(0).getContext('2d')
+            var barChart = new Chart(barChartCanvas)
+            var barChartData = areaChartData
+            barChartData.datasets[1].fillColor = '#00a65a'
+            barChartData.datasets[1].strokeColor = '#00a65a'
+            barChartData.datasets[1].pointColor = '#00a65a'
+            var barChartOptions = {
+                //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+                scaleBeginAtZero: true,
+                //Boolean - Whether grid lines are shown across the chart
+                scaleShowGridLines: true,
+                //String - Colour of the grid lines
+                scaleGridLineColor: 'rgba(0,0,0,.05)',
+                //Number - Width of the grid lines
+                scaleGridLineWidth: 1,
+                //Boolean - Whether to show horizontal lines (except X axis)
+                scaleShowHorizontalLines: true,
+                //Boolean - Whether to show vertical lines (except Y axis)
+                scaleShowVerticalLines: true,
+                //Boolean - If there is a stroke on each bar
+                barShowStroke: true,
+                //Number - Pixel width of the bar stroke
+                barStrokeWidth: 2,
+                //Number - Spacing between each of the X value sets
+                barValueSpacing: 5,
+                //Number - Spacing between data sets within X values
+                barDatasetSpacing: 1,
+                //String - A legend template
+                legendTemplate: '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+                //Boolean - whether to make the chart responsive
+                responsive: true,
+                maintainAspectRatio: true
+            }
+
+            barChartOptions.datasetFill = false
+            barChart.Bar(barChartData, barChartOptions)
+        })
     </script>
 
 </body>

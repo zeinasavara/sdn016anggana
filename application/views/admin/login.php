@@ -30,7 +30,7 @@
     <div class="login-box" style="margin-top: 3%;">
         <div class="row">
             <div class="col-12" style="display: flex; justify-content: center;">
-                <img src="<?= site_url('assets/img/twh.png') ?>" alt="Tut Wuri Handayani" style="width: 20%;">
+                <img src="<?= site_url('assets/img/' . $this->fungsi->setting()->icon_title) ?>" alt="Tut Wuri Handayani" style="width: 20%;">
             </div>
         </div>
         <div class="login-logo" style="margin-bottom: 10px;">

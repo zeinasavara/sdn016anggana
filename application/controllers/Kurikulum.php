@@ -6,7 +6,9 @@ class Kurikulum extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        belum_login();
+        if ($this->uri->segment(2) !== 'kalenderakademik' && $this->uri->segment(2) !== 'ekstrakurikuler') {
+            belum_login();
+        }
 
         $this->load->model('kurikulum_m');
         $this->load->library('form_validation');

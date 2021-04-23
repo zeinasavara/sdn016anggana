@@ -118,7 +118,7 @@ class Setting extends CI_Controller
 
         // Gantik Struktur Baru
         if ($this->upload->do_upload('icon_title')) {
-            // Hapus Struktur lama di direktori
+            // Hapus Icon lama jika ada di direktori
             $icon_title = $this->fungsi->setting()->icon_title;
             $target_file = './assets/img/' . $icon_title;
             unlink($target_file);

@@ -87,3 +87,44 @@ $('.konfirReset').on('click', function (e) {
 		}
 	})
 });
+
+$('.terimaPesan').on('click', function (e) {
+	e.preventDefault();
+	const href = $(this).attr('href');
+	Swal.fire({
+		title: 'Pesan Sangat Membantu?',
+		text: "Pilih 'Terima' jika pesan dari pengunjung sangat membantu.",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonText: 'Terima',
+		cancelButtonText: 'Batal',
+		customClass: 'swal-wide'
+	}).then((result) => {
+		if (result) {
+            if (result.isConfirmed) {
+                document.location.href = href;
+            }
+		}
+	})
+});
+
+$('.tolakPesan').on('click', function (e) {
+	e.preventDefault();
+	const href = $(this).attr('href');
+	Swal.fire({
+		title: 'Pesan Tidak Pantas?',
+		text: "Pilih 'Tolak' jika pesan tidak pantas. Pesan akan dihapus dari databases.",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonColor: '#d33',
+		confirmButtonText: 'Tolak',
+		cancelButtonText: 'Batal',
+		customClass: 'swal-wide'
+	}).then((result) => {
+		if (result) {
+            if (result.isConfirmed) {
+                document.location.href = href;
+            }
+		}
+	})
+});
