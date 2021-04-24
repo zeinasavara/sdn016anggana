@@ -21,6 +21,7 @@ class Inbox_m extends CI_Model
         $params['nama_lengkap'] = ucwords($post['nama_lengkap']);
         $params['email']        = $post['email'];
         $params['pesan']        = $post['pesan'];
+        $params['sent']         = date('Y-m-d H:i:s', time());
         $params['status']       = 1;
         $this->db->insert('tb_pesan', $params);
     }

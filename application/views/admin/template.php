@@ -108,10 +108,10 @@
                                                     </div>
                                                     <h4>
                                                         <?= $inbox->nama_lengkap ?>
-                                                        <small><i class="fa fa-clock-o"></i> <?= date('i', time()) - date('i', strtotime($inbox->sent))  ?> mins</small>
+                                                        <small><i class="fa fa-clock-o"></i> <?= time_ago(strtotime($inbox->sent))  ?></small>
                                                     </h4>
                                                     <p><?= substr($inbox->pesan, 0, 30) . ' ....' ?></p>
-                                                    <p><?= date('d F Y H:i:s', time()) ?></p>
+                                                    <p><?= date('d F Y H:i:s', strtotime($inbox->sent)) ?></p>
                                                 </a>
                                             </li>
                                             <!-- end message -->
@@ -141,7 +141,7 @@
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                     <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Akun Saya</a>
+                                        <a href="<?= base_url('akunsaya') ?>" class="btn btn-default btn-flat">Akun Saya</a>
                                     </div>
                                     <div class="pull-right">
                                         <a href="<?= site_url('auth/logout') ?>" class="btn btn-danger btn-flat konfirLogout">Keluar</a>
@@ -175,14 +175,15 @@
                     <li <?= $this->uri->segment(1) == 'gtk' ? 'class="active"' : '' ?>><a href="<?= base_url('gtk') ?>"><i class="fa fa-users"></i> <span>GTK</span></a></li>
                     <li <?= $this->uri->segment(1) == 'kurikulum' ? 'class="active"' : '' ?>><a href="<?= base_url('kurikulum') ?>"><i class="fa fa-book"></i> <span>Kurikulum</span></a></li>
                     <li <?= $this->uri->segment(1) == 'galeri' ? 'class="active"' : '' ?>><a href="<?= base_url('galeri/data') ?>"><i class="fa fa-image"></i> <span>Galeri</span></a></li>
+
                     <li class="header">KONFIGURASI WEB</li>
                     <li <?= $this->uri->segment(1) == 'tentangkami' ? 'class="active"' : '' ?>><a href="<?= base_url('tentangkami') ?>"><i class="fa fa-address-card"></i> <span>Tentang Kami</span></a></li>
-                    <li><a href="<?= base_url('inbox') ?>"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
+                    <li <?= $this->uri->segment(1) == 'inbox' ? 'class="active"' : '' ?>><a href="<?= base_url('inbox') ?>"><i class="fa fa-envelope-square"></i> <span>Pesan Masuk</span></a></li>
                     <li <?= $this->uri->segment(1) == 'setting' ? 'class="active"' : '' ?>><a href="<?= base_url('setting') ?>"><i class="fa fa-gears"></i> <span>Setting</span></a></li>
+
                     <?php if ($this->fungsi->user_login()->role == 1) : ?>
                         <li class="header">PENGATURAN</li>
-                        <li <?= $this->uri->segment(2) == 'pengguna' ? 'class="active"' : '' ?>><a href="<?= base_url('pengguna') ?>"><i class="fa fa-users"></i> <span>Akses Pengguna</span></a></li>
-                        <li><a href="<?= base_url('akun') ?>"><i class="fa fa-user"></i> <span>Akun Saya</span></a></li>
+                        <li <?= $this->uri->segment(1) == 'pengguna' ? 'class="active"' : '' ?>><a href="<?= base_url('pengguna') ?>"><i class="fa fa-users"></i> <span>Akses Pengguna</span></a></li>
                     <?php endif ?>
 
                 </ul>
